@@ -72,7 +72,7 @@
             let userAnswer = document.getElementById("answer").value.trim();
             let correctAnswer = "1"; // Adjust based on expected format
 
-            if (userAnswer === correctAnswer || parseFloat(userAnswer) === parseFloat(correctAnswer)) {
+            if (userAnswer.trim() === correctAnswer) || parseFloat(userAnswer) === parseFloat(correctAnswer)) {
                 document.getElementById("hidden-link").style.display = "block";
             } else {
                 alert("❌ Wrong answer! Try again.");
