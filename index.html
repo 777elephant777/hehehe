@@ -6,6 +6,7 @@
     <title>Spinning Elephant Math Challenge</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="elephant.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <style>
         body {
             display: flex;
@@ -36,6 +37,7 @@
         .math-box {
             font-size: 24px;
             margin-top: 20px;
+            text-align: center;
         }
 
         input {
@@ -70,7 +72,8 @@
     <div class="spinning-text">🌀 Spinning Elephant 🐘</div>
 
     <div class="math-box">
-        Solve: \( 987 \times (123 - 89) + 456 \div 2 \)
+        Solve: 
+        $$\int x t^{2} \ln(t) dt + \ln(x^{2} + 1) = 0$$
     </div>
 
     <input type="text" id="answer" placeholder="Enter answer">
@@ -83,9 +86,9 @@
     <script>
         function checkAnswer() {
             let userAnswer = document.getElementById("answer").value;
-            let correctAnswer = (987 * (123 - 89) + 456 / 2); // Calculation result
+            let correctAnswer = "Your Solution Here"; // Replace with actual evaluated result.
 
-            if (parseFloat(userAnswer) === correctAnswer) {
+            if (userAnswer.trim() === correctAnswer) {
                 document.getElementById("hidden-link").style.display = "block";
             } else {
                 alert("❌ Wrong answer! Try again.");
