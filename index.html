@@ -70,9 +70,11 @@
     <script>
         function checkAnswer() {
             let userAnswer = document.getElementById("answer").value.trim();
-            let correctAnswer = "1"; // Adjust based on expected format
+            let correctAnswer = "1"; // Expected answer
 
-            if (userAnswer.trim() === correctAnswer) || parseFloat(userAnswer) === parseFloat(correctAnswer)) {
+            console.log("User entered: ", userAnswer); // Debugging step
+
+            if (userAnswer === correctAnswer || parseFloat(userAnswer) === parseFloat(correctAnswer)) {
                 document.getElementById("hidden-link").style.display = "block";
             } else {
                 alert("❌ Wrong answer! Try again.");
