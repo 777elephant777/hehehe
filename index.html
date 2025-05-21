@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinning Elephant Math Challenge</title>
+    <title>Math Challenge</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="elephant.ico">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <style>
         body {
@@ -17,21 +17,6 @@
             background-color: #f4f4f4;
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-
-        .spinning-text {
-            font-size: 36px;
-            font-weight: bold;
-            color: #007bff;
-            display: inline-block;
-            transform-origin: center;
-            animation: spinText 3s linear infinite;
-            margin-bottom: 20px;
-        }
-
-        @keyframes spinText {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
 
         .math-box {
@@ -69,8 +54,6 @@
 </head>
 <body>
 
-    <div class="spinning-text">🌀 Spinning Elephant 🐘</div>
-
     <div class="math-box">
         Solve: 
         $$\int x t^{2} \ln(t) dt + \ln(x^{2} + 1) = 0$$
@@ -85,10 +68,10 @@
 
     <script>
         function checkAnswer() {
-            let userAnswer = document.getElementById("answer").value;
-            let correctAnswer = "Your Solution Here"; // Replace with actual evaluated result.
+            let userAnswer = document.getElementById("answer").value.trim();
+            let correctAnswer = "1"; // Adjust based on expected format
 
-            if (userAnswer.trim() === correctAnswer) {
+            if (userAnswer === correctAnswer || parseFloat(userAnswer) === parseFloat(correctAnswer)) {
                 document.getElementById("hidden-link").style.display = "block";
             } else {
                 alert("❌ Wrong answer! Try again.");
