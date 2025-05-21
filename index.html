@@ -14,15 +14,17 @@
             height: 100vh;
             background-color: #f4f4f4;
             margin: 0;
+            font-family: Arial, sans-serif;
         }
 
-        .elephant-container {
-            width: 200px;
-            height: 200px;
-            animation: spin 3s linear infinite;
+        .spinning-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: #007bff;
+            animation: spinText 3s linear infinite;
         }
 
-        @keyframes spin {
+        @keyframes spinText {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
@@ -30,7 +32,7 @@
 </head>
 <body>
 
-    <img class="elephant-container" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Elephant_icon.png" alt="Spinning Elephant">
+    <div class="spinning-text">Spinning Elephant</div>
 
 </body>
 </html>
